@@ -1,4 +1,11 @@
 
+window.addEventListener('load', () => {
+
+    document.querySelector('.js-preloader').classList.add('fade-out');
+    setTimeout(() => {
+        document.querySelector('.js-preloader').style.display = 'none';
+    }, 600)
+});
 
 // nav
 const navToggler = document.querySelector('.js-nav-toggler');
@@ -21,7 +28,7 @@ document.addEventListener('click', (e) => {
 // theme light dark
 function themeLightDark(){
     const switcherBtn = document.querySelector('.js-swicher-btn');
-    const icon = switcherBtn.querySelector('i');
+    const icon = switcherBtn.querySelector('i'); //error
 
     function changeIcon(){
         if(document.body.contains('dark')){

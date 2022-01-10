@@ -50,6 +50,35 @@ body {
     -webkit-top-highlight-color: transparent;
 }
 
+@keyframes zoomInOut {
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-color);
+    z-index: 10;
+    display: flex;
+    transition: opacity 0.6s ease;
+}
+.preloader .fade-out {
+    opacity: 0;
+}
+.preloader img {
+    width: 80px;
+    margin: auto;
+    animation: zoomInOut 1s infinite;
+}
+
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     color: var(--black-90);
@@ -847,18 +876,94 @@ textarea.input-control {
     transform: scale(1);
 }
 
+/* media queries */
 @media (max-width: 1199px){
-
+    .container {
+        padding: 0 30px;
+    }
 }
 
 @media (max-width: 991px){
-    
+    .box {
+        height: 280px;
+        width: 280px;
+    }
+    .section-title .sub-title{
+        font-size: 32px;
+    }
+    .services-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .services-item .img-box {
+        margin-bottom: 20px;
+    }
+    .services-item .text {
+        padding-left: 0;
+    }
+    .fun-fact-item {
+        grid-column: span 6;
+    }
+    .pricing-item {
+        grid-column: span 6;
+    }
+    .contact-box {
+        padding: 30px;
+    }
+    .footer-item {
+        grid-column: span 6;
+    }
 }
 
 @media (max-width: 767px){
-    
+    .container {
+        padding: 0 15px;
+    }
+    .home {
+        padding: 140px 0 80px;
+    }
+    .home-img, .home-text {
+        grid-column: span 12;
+    }
+    .home-img {
+        order: -1;
+    }
+    .home-text {
+        margin-top: 60px;
+    }
+    .section-title .sub-title {
+        font-size: 26px;
+    }
+    .about-img, .about-text {
+        grid-column: span 12;
+    }
+    .about-text {
+        margin-top: 60px;
+    }
+    .pricing-item {
+        grid-column: span 12;
+    }
+    .contact-details,
+    .contact-form {
+        grid-column: span 12;
+    }
+    .contact-form {
+        margin-top: 40px;
+    }
 }
 
 @media (max-width: 575px){
-    
+    .services-item {
+        grid-column: span 12;
+    }
+    .fun-fact-item {
+        grid-column: span 12;
+    }
+    .footer-item {
+        grid-column: span 12;
+    }
+    .row {
+        grid-gap: 15px;
+    }
 }
