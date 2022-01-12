@@ -602,17 +602,17 @@ button {
     transition: transform 0.5s ease;
 }
 
-.pricing-1 .pricing-body .bx-chevron-down-circle,
+.pricing-1 .pricing-body .fa-check-circle,
 .pricing-1 .pricing-header .price,
 .pricing-1 .pricing-header h3::before {
     color: var(--light-red);
 }
-.pricing-2 .pricing-body .bx-chevron-down-circle,
+.pricing-2 .pricing-body .fa-check-circle,
 .pricing-2 .pricing-header .price,
 .pricing-2 .pricing-header h3::before {
     color: var(--main-color);
 }
-.pricing-3 .pricing-body .bx-chevron-down-circle,
+.pricing-3 .pricing-body .fa-check-circle,
 .pricing-3 .pricing-header .price,
 .pricing-3 .pricing-header h3::before {
     color: var(--light-yellow);

@@ -27,22 +27,22 @@ document.addEventListener('click', (e) => {
 
 // theme light dark
 function themeLightDark(){
-    const switcherBtn = document.querySelector('.js-swicher-btn');
+    const switcherBtn = document.querySelector('.js-switcher-btn');
     const icon = switcherBtn.querySelector('i'); //error
 
     function changeIcon(){
-        if(document.body.contains('dark')){
-            icon.classList.remove('bxs-moon');
-            icon.classList.add('bxs-sun');
+        if(document.body.classList.contains('dark')){
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
         }else{
-            icon.classList.remove('bxs-sun');
-            icon.classList.add('bxs-moon');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
         }
     }
     switcherBtn.addEventListener('click', () => {
         document.body.classList.toggle('dark');
         changeIcon();
-        if(document.body.contains('dark')){
+        if(document.body.classList.contains('dark')){
             localStorage.setItem('theme', 'dark');
         }else{
             localStorage.setItem('theme', 'light');
