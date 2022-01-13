@@ -20,7 +20,7 @@ A Web&Dog é um site desenvolvido com o objetivo de ajudar os donos de pets, fon
 </p>
 
 ## Link do site:
-Para acessar no site [clique aqui!]()
+Para acessar no site [clique aqui!](https://jefersoncf.github.io/web-dog/)
 
 ## Tecnologias utilizadas:
 
